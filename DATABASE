@@ -1,0 +1,5 @@
+dibawah adalah database yang digunakan dengan nama 'ahakita' menggunakan XAMPP MySQL ( UNTUK TAMPILAN AWALAN WEB  DI htdocs yaitu http://localhost/AhaKita/Homepage AhaKita.html )
+
+CREATE TABLE users ( id INT AUTO_INCREMENT PRIMARY KEY, name varchar(255), email VARCHAR(255) UNIQUE, address VARCHAR(255), mobile_number VARCHAR(15), password VARCHAR(255), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP );
+
+CREATE TABLE keranjang ( id INT AUTO_INCREMENT PRIMARY KEY, user_id INT, product_name VARCHAR(255), product_price DECIMAL(10, 2), quantity INT, FOREIGN KEY (user_id) REFERENCES users(id) );
