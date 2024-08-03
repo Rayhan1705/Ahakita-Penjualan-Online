@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <title>Halaman Login</title>
+</head>
+<body>
+  <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-6">
+          <img src="draw2.png" class="img-fluid" alt="Gambar Telepon">
+        </div>
+        <div class="col-md-6">
+          <form id="loginForm" action="login.php" method="POST">
+            <!-- Input Email -->
+            <div class="form-group">
+              <input type="email" name="email" id="emailInput" class="form-control form-control-lg" placeholder="Alamat Email" required />
+            </div>
+
+            <!-- Input Password -->
+            <div class="form-group">
+              <input type="password" name="password" id="passwordInput" class="form-control form-control-lg" placeholder="Kata Sandi" required />
+            </div>
+
+            <!-- Checkbox Remember Me dan Link Lupa Kata Sandi -->
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Ingat Saya</label>
+              </div>
+            </div>
+
+            <!-- Tombol Sign In -->
+            <button type="submit" id="signIn" class="btn btn-primary btn-lg btn-block">Masuk</button>
+            
+            <!-- Link ke halaman registrasi -->
+            <a href="daftar akun.html" class="float-center">Belum punya akun? Daftar di sini</a>
+
+            <!-- Div untuk menampilkan pesan error -->
+            <div id="errorDiv" class="alert alert-danger mt-3" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- JavaScript untuk menampilkan pesan error -->
+  <script>
+    // Ambil parameter error dari URL setelah halaman dimuat
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+
+      // Jika ada pesan error, tampilkan di dalam div errorDiv
+      if (error) {
+        const errorDiv = document.getElementById('errorDiv');
+        errorDiv.textContent = error;
+        errorDiv.style.display = 'block'; // Tampilkan div error
+      }
+    });
+  </script>
+  
+  <!-- jQuery terlebih dahulu, kemudian Popper.js, lalu Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

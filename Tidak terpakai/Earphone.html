@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Ahakita</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #4063af;
+        }
+        .navbar-brand {
+            font-size: 2em;
+            color: #fff;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+        }
+        footer .col {
+            margin-bottom: 10px;
+        }
+        footer h5 {
+            color: #fff;
+        }
+        footer ul {
+            padding-left: 5px;
+            list-style: none;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+        .row-produk{
+            background-color: #fff;
+            margin: 0;
+            padding: 5px;
+            padding-top: 16px;
+        }
+        .produk-details {
+            display: flex;
+        }
+        .produk-details .caption {
+            margin-left: 20px;
+        }
+        .small-image{
+        width: 50px; 
+        height: 50px; 
+        margin-right: 5px; 
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: black;" >
+        <div class="container-fluid">
+            <img src="logo.jpg" alt="Logo" class="navbar-brand" style="width: 70px;"><span class="ml-2" style="font-size: 2em; color: white;">AhaKita</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline ms-auto" style="display: flex; align-items: center; width: 400px;" role="search" action="Kinanthi.html" action="Kamar2.html" action="Kamar3.html" action="Kamar4.html" action="Kamar5.html" action="Kamar6.html" method="GET">
+                    <input class="form-control mr-sm-3" type="search" placeholder="Cari Barang Anda" aria-label="Cari" style="flex-grow: 1; margin-right: 10px; width: 70%;">
+                    <button type="button" class="btn btn-light">Search</button>
+                  </form>
+                  
+                  
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mr-10">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html" style="color: white;">Login/Sign-Up</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                            Cari apa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="KosKita.html">Elektronik</a></li>
+                            <li><a class="dropdown-item" href="Aksesoris.html" onclick="redirectToKontrakanPage()">Aksesoris</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="SyaratK.html" style="color: white;">Syarat dan Ketentuan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PBantuan.html" style="color: white;">Pusat Bantuan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- produk mouse -->
+<div class="container">
+    <div class="row row-produk">
+        <div class="col-lg-5">
+            <figure class="figure">
+                <img src="earphone.jpg" class="figure-img img-fluid" style="border-radius: 5px; width: 100%;">
+                <div class="small-images">
+                    <img src="earphone.jpg" alt="" class="small-image" onclick="changeImage('earphone.jpg')">
+                    <img src="earphone.jpg" alt="" class="small-image" onclick="changeImage('earphone.jpg')">                  
+                </div>
+            </figure>
+        </div>
+        <div class="col-lg-7">
+            <div class="produk-details">
+                <div class="caption">
+                    <h2>Casing iPhone 12 Liquid Air</h2>
+                    <p>Spesifikasi Casing iPhone 12 Liquid Air:</p>
+                    <ul>
+                        <li>Air Cushion Technology
+                            Bumper yang berfungsi untuk melindungi dari benturan external</li>
+                        <li>Geometric Pattern
+                            Geometric berfungsi untuk memberikan kenyamanan saat menggenggam smartphone</li>
+                        <li>Spiderweb Pattern
+                            Spiderweb Pattern pada bagian dalam casing berfungsi untuk menghantarkan panas</li>
+                        <li>Raised Lips
+                            Tonjolan pada bagian layar dan kamera yang akan melindungi dari goresan saat diletakkan pada bidang datar</li>
+                        <li>Dimensi: Raised Lip 0,5mm dan Ketebalan 2.5mm </li>
+                    </ul>
+                    <h6 class="card-title" style="font-size: 24px;"><del style="color: red;">Rp350.000</del> Rp225.000 Diskon 35% </h6>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span>(4.0)</span>
+                    </div>
+                    <hr>
+                    <div class="deskripsi">
+                        <h3>Deskripsi Produk</h3>
+                        <p>Casing iPhone 12 Liquid Air terbuat dari Bahan TPU fleksibel memberikan cengkeraman yang nyaman dan anti-slip. Menampilkan tampilan matte yang elegan dengan teknologi penyerapan kejut.</p>
+                    </div>
+                    <hr>
+                    <div class="pengiriman">
+                        <h3>Pengiriman</h3>
+                        <div class="delivery-info">
+                            <img src="lokasi.png" alt="" class="delivery-icon" style="width: 40px; height: 40px;"> Dikirim dari Yogyakarta
+                        </div>
+                        <div class="delivery-info">
+                            <img src="trukk.png" alt="" class="delivery-icon" style="width: 40px; height: 40px;"> Ongkir reguler Rp 6.000 - Rp 14.000
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="warna">
+                        <h3>Pilihan Warna:</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="warna" id="warnaHitam" value="hitam" checked>
+                            <label class="form-check-label" for="warnaHitam">
+                                Hitam
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="warna" id="warnaPutih" value="putih">
+                            <label class="form-check-label" for="warnaPutih">
+                                Putih
+                            </label>
+                        </div>
+                    </div>
+                    <div class="keranjang">
+                        <label for="quantity">Jumlah:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10">
+                        <button class="btn btn-primary" onclick="addToCart()">Tambah ke Keranjang</button>
+                        <button class="btn btn-success" onclick="buyNow()">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+<script>
+    var clickTimer = null;
+ 
+ function changeImage(imagePath) {
+     if (clickTimer == null) {
+         clickTimer = setTimeout(function() {
+             document.getElementById('main-image').src = imagePath;
+             clickTimer = null;
+         }, 300);
+     } else {
+         clearTimeout(clickTimer);
+         clickTimer = null;
+         resetToMainImage();
+     }
+ }
+ 
+ function resetToMainImage() {
+     var mainImagePath = 'earphone.jpg'; 
+     document.getElementById('main-image').src = mainImagePath;
+ }
+ </script>
+
+<script>
+    function addToCart() {
+        window.location.href = "ke keranjang.html";
+    }
+    function buyNow() {
+        window.location.href = "beli sekarang.html";
+    }
+</script>
+
+   <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.8434416691407!2d110.3354412733644!3d-7.8063930721381265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57fadd0b0c8d%3A0xbce5d6f82ab337be!2sAha%20Aksesoris!5e0!3m2!1sen!2sid!4v1714698115149!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5>AhaKita</h5>
+                    <p>Tempat pencarian Aksesoris dan Hp terlengkap dan termurah di Jogjakarta sesuai dengan kebutuhan Anda, Kami menawarkan beragam produk terbaru dan terlengkap serta berbagai promo menarik setiap bulannya. Kunjungi kami sekarang dan temukan kebutuhan Anda dengan harga terbaik!</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Kebijakan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="KPrivasi.html" class="text-white">Kebijakan Privasi</a></li>
+                        <li><a href="SyaratK.html" class="text-white">Syarat dan Ketentuan</a></li>
+                        <li><a href="PBantuan.html" class="text-white">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="telp.png" alt="Instagram Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="#" class="text-white">083876788630</a>
+                        </li>
+                        <li>
+                            <img src="instagram.png" alt="Instagram Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="https://www.instagram.com/ahaaksesoris?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-white"><i class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                        <li>
+                            <img src="email.png" alt="Email Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="mailto:cs@koskita.com" class="text-white"><i class="fas fa-envelope"></i> Ahakita@gmail.com</a>
+                        </li>
+                        <li>
+                            <img src="twitter.png" alt="Twitter Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="https://x.com/ZXeKKkkkkkkkk?t=k3HSreNnEGlOKypPbV5hwQ&s=09" class="text-white"><i class="fab fa-twitter"></i> Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 AhaKita. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

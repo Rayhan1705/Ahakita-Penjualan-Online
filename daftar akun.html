@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Registrasi</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-6">
+          <img src="draw2.png" class="img-fluid" alt="Gambar Telepon">
+        </div>
+        <div class="col-md-6">
+          <form id="registerForm" action="Registrasi.php" method="POST">
+            <div class="form-group">
+              <input type="text" name="name" id="NameInput" class="form-control form-control-lg" placeholder="Nama" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="emailInput" class="form-control form-control-lg" placeholder="Alamat Email" required />
+              <small id="emailError" class="text-danger"></small>
+            </div>
+            <div class="form-group">
+              <input type="text" name="address" id="addressInput" class="form-control form-control-lg" placeholder="Alamat" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="mobile_number" id="mobileNumberInput" class="form-control form-control-lg" placeholder="Nomor HP" required />
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" id="passwordInput" class="form-control form-control-lg" placeholder="Password" required />
+            </div>
+            <div class="form-group">
+              <input type="password" name="confirm_password" id="confirmPasswordInput" class="form-control form-control-lg" placeholder="Input Password Again" required />
+            </div>
+
+            <!-- Menampilkan pesan error dari JavaScript -->
+            <div id="passwordError" class="text-danger"></div>
+           
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Daftar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+       // Ambil nilai dari parameter URL jika ada pesan error
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+     // Tampilkan pesan error jika email sudah terdaftar
+     if (error === 'email_terdaftar') {
+      document.getElementById('emailError').textContent = 'Email sudah terdaftar. Gunakan email lain.';
+    }
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+      var password = document.getElementById("passwordInput").value;
+      var confirmPassword = document.getElementById("confirmPasswordInput").value;
+      var errorElement = document.getElementById("passwordError");
+  
+      if (password !== confirmPassword) {
+        errorElement.textContent = "Konfirmasi password tidak sesuai.";
+        event.preventDefault(); // Menghentikan pengiriman form jika validasi gagal
+      } else {
+        errorElement.textContent = ""; // Menghapus pesan error jika password cocok
+      }
+    });
+  </script>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery terlebih dahulu, kemudian Popper.js, lalu Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

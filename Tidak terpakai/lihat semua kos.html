@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Koskita</title>
+    <style>
+               body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #4063af;
+        }
+        .navbar-brand {
+            font-size: 2em;
+            color: #fff;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+        }
+        footer .col {
+            margin-bottom: 10px;
+        }
+        footer h5 {
+            color: #fff;
+        }
+        footer ul {
+            padding-left: 5px;
+            list-style: none;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-in-image {
+            position: absolute;
+            top: 70%;
+            right: 54%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg" style="background-color: #4063af;" >
+    <div class="container-fluid">
+        <img src="koskita.png" alt="Logo" class="navbar-brand" style="width: 70px;"><span class="ml-2" style="font-size: 2em;">KosKita</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mr-10">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="login.html">Login/Sign-Up</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cari apa
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="KosKita.html">Kost</a></li>
+                        <li><a class="dropdown-item" href="Kontrakan.html" onclick="redirectToKontrakanPage()">Kontrakan</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Syarat dan Ketentuan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pusat Bantuan</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container " style="width: 150%;">
+    <div class="row align-items-start">
+        <div class="col">
+            <p><h1 class="mt-5 font-bold italic text-blue-500">mau cari kost?</h1><br>Dapatkan Info nya dari KosKita </p>
+            <form class="d-flex mt-1" role="search">
+                <input class="form-control me-2" type="search" placeholder="Masukan Nama atau Alamat Kost" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+                <h3>Rekomendasi Kos di Jogja</h3>
+                <a class="btn btn-outline-success" href="KosKita.html">Kembali</a>
+
+              </div>
+
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img src="k1.jpg" class="card-img-top" alt="Kamar" style="height: 300px; width: 350px; object-fit: cover;">
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body d-flex flex-column" style="padding: 1;">
+                    <div class="d-flex align-items-center mb-1">
+                        <h6 class="mb-0 "><span class="badge text-bg-secondary">Kos Andalan</span></h6>
+                        <div class="px-2"></div> 
+                        <h6 class="mb-0"><span class="badge text-bg-secondary">Putri</span></h6>
+                        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill ms-2" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <span class="ms-2">4.7</span>
+                    </div>
+                    <p class="card-text">K. Mandi Dalam - WiFi - AC - Kloset Duduk - Kasur - Akses 24 Jam</p>
+                    <p class="card-text">Rp1.500.000/bulan</p>
+                    <a href="Kamar1.html" class="btn btn-primary mt-auto" onclick="redirectToRoomPage('Kamar1.html')">Cek Kamar</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img src="k2.jpg" class="card-img-top" alt="Kamar" style="height: 300px; width: 350px; object-fit: cover;">
+                </div>
+                <div class="col-md-4 ">
+                  <div class="card-body d-flex flex-column" style="padding: 1;">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="mb-0"><span class="badge text-bg-secondary">Kos Andalan</span></h6>
+                      <div class="px-2"></div> 
+                      <h6 class="mb-0"><span class="badge text-bg-secondary">Putra</span></h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill ms-2" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <span class="ms-2">4.8</span>
+                    </div>
+                    <p class="card-text">K. Mandi Dalam - WiFi - AC - Kloset Duduk - Kasur - Akses 24 Jam</p>
+                    <p class="card-text">Rp1.500.000/bulan</p>
+                    <a href="Kamar2.html" class="btn btn-primary mt-auto" onclick="redirectToRoomPage('Kamar2.html')">Cek Kamar</a>
+                  </div>
+                </div>
+              </div>
+              
+       
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img src="k3.jpg" class="card-img-top" alt="Kamar" style="height: 300px; width: 350px; object-fit: cover;">
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body d-flex flex-column" style="padding: 1;">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="mb-0"><span class="badge text-bg-secondary">Putra</span></h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill ms-2" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <span class="ms-2">4.9</span>
+                    </div>
+                    <p class="card-text">K. Mandi Dalam - WiFi - AC - Kloset Duduk - Kasur - Akses 24 Jam</p>
+                    <p class="card-text">Rp1.500.000/bulan</p>
+                    <a href="Kamar3.html" class="btn btn-primary mt-auto" onclick="redirectToRoomPage('Kamar3.html')">Cek Kamar</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img src="k4.png" class="card-img-top" alt="Kamar" style="height: 300px; width: 350px; object-fit: cover;">
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body d-flex flex-column" style="padding: 1;">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="mb-0"><span class="badge text-bg-secondary">Putra</span></h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill ms-2" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <span class="ms-2">4.1</span>
+                    </div>
+                    <p class="card-text">K. Mandi Dalam - WiFi - AC - Kloset Duduk - Kasur - Akses 24 Jam</p>
+                    <p class="card-text">Rp1.500.000/bulan</p>
+                    <a href="Kamar4.html" class="btn btn-primary mt-auto" onclick="redirectToRoomPage('Kamar3.html')">Cek Kamar</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img src="k5.jpg" class="card-img-top" alt="Kamar" style="height: 300px; width: 350px; object-fit: cover;">
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body d-flex flex-column" style="padding: 1;">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="mb-0"><span class="badge text-bg-secondary">Putra</span></h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill ms-2" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <span class="ms-2">4.5</span>
+                    </div>
+                    <p class="card-text">K. Mandi Dalam - WiFi - AC - Kloset Duduk - Kasur - Akses 24 Jam</p>
+                    <p class="card-text">Rp1.500.000/bulan</p>
+                    <a href="Kamar5.html" class="btn btn-primary mt-auto" onclick="redirectToRoomPage('Kamar3.html')">Cek Kamar</a>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row mt-2">
+                <div class="col-md-4">
+                  <img src="k6.jpg" class="card-img-top" alt="Kamar" style="height: 300px; width: 350px; object-fit: cover;">
+                </div>
+                <div class="col-md-4">
+                  <div class="card-body d-flex flex-column" style="padding: 1;">
+                    <div class="d-flex align-items-center mb-1">
+                      <h6 class="mb-0"><span class="badge text-bg-secondary">Kos Andalan</span></h6>
+                      <div class="px-2"></div> 
+                      <h6 class="mb-0"><span class="badge text-bg-secondary">Putri</span></h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-star-fill ms-2" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                    </svg>
+                    <span class="ms-2">4.9</span>
+                    </div>
+                    <p class="card-text">K. Mandi Dalam - WiFi - AC - Kloset Duduk - Kasur - Akses 24 Jam</p>
+                    <p class="card-text">Rp1.500.000/bulan</p>
+                    <a href="Kamar6.html" class="btn btn-primary mt-auto" onclick="redirectToRoomPage('Kamar3.html')">Cek Kamar</a>
+                  </div>
+                </div>
+              </div>
+              
+                      
+                    
+    <footer class="mt-3">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126501.12294344434!2d110.29341321754396!3d-7.772842909677883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599bd3bdc4ef%3A0x6f1714b0c4544586!2sUniversity%20of%20Amikom%20Yogyakarta!5e0!3m2!1sen!2sid!4v1714045087421!5m2!1sen!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5>kosKita</h5>
+                    <p>Platform pencarian tempat tinggal yang membantu pengguna menemukan kost dan kontrakan  yang sesuai dengan kebutuhan Kamu</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Kebijakan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Kebijakan Privasi</a></li>
+                        <li><a href="#" class="text-white">Syarat dan Ketentuan</a></li>
+                        <li><a href="#" class="text-white">Pusat Bantuan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Hubungi Kami</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <img src="telp.png" alt="Instagram Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="#" class="text-white">081222223334</a>
+                        </li>
+                        <li>
+                            <img src="instagram.png" alt="Instagram Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="https://www.instagram.com/hw_rayhan?igsh=MXN0aWMyMzB2bW9xNg==" class="text-white"><i class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                        <li>
+                            <img src="email.png" alt="Email Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="mailto:cs@koskita.com" class="text-white"><i class="fas fa-envelope"></i> cs@koskita.com</a>
+                        </li>
+                        <li>
+                            <img src="twitter.png" alt="Twitter Logo" class="me-2" style="width: 20px; height: 20px;">
+                            <a href="https://x.com/ZXeKKkkkkkkkk?t=k3HSreNnEGlOKypPbV5hwQ&s=09" class="text-white"><i class="fab fa-twitter"></i> Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 kosKita. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>

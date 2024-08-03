@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ahakita</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #4063af;
+        }
+        .navbar-brand {
+            font-size: 2em;
+            color: #fff;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+        }
+        footer .col {
+            margin-bottom: 10px;
+        }
+        footer h5 {
+            color: #fff;
+        }
+        footer ul {
+            padding-left: 5px;
+            list-style: none;
+        }
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+        .row-produk{
+            background-color: #fff;
+            margin: 0;
+            padding: 5px;
+            padding-top: 16px;
+        }
+        .produk-details {
+            display: flex;
+        }
+        .produk-details .caption {
+            margin-left: 20px;
+        }
+        .small-image{
+        width: 50px; 
+        height: 50px; 
+        margin-right: 5px; 
+        cursor: pointer;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        }
+        
+        .table {
+            margin-top: 20px;
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 
+.float i{
+  font-size: 24px;
+  position: relative;
+}
+
+        .float-vertical {
+  position: fixed;
+  right: 10px; /* Jarak dari sisi kanan layar */
+  bottom: 10px; /* Jarak dari bawah layar */
+}
+
+.float-whatsapp {
+  bottom: 70px; /* Jarak dari bawah layar */
+}
+
+.float-instagram {
+  bottom: 105px; /* Jarak dari bawah layar */
+}
+
+.float-twitter {
+  bottom: 170px; /* Jarak dari bawah layar */
+}
+
+        .social-float {
+  display: flex;
+  flex-direction: column;  /* Stacks icons vertically */
+  align-items: center;
+  justify-content: center; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(0, 0, 0);" >
+        <div class="container-fluid">
+            <img src="logo.jpg" alt="Logo" class="navbar-brand" style="width: 70px;"><span class="ml-2" style="font-size: 2em; color: #ffffff;">AhaKita</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <form class="form-inline ms-auto" style="display: flex; align-items: center; width: 400px;" role="search" >
+                <input class="form-control mr-sm-3" type="search" placeholder="Cari Barang Anda" aria-label="Cari" style="flex-grow: 1; margin-right: 5px; width: 50%;">
+                <button type="submit" class="btn btn-light">Search</button>
+            </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mr-10">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="menu profil.html" style="color: #ffffff;">Profil</a>
+                </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #ffffff;">
+                            Cari apa
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="elektronik.html">Elektronik</a></li>
+                            <li><a class="dropdown-item" href="Aksesoris.html" onclick="redirectToKontrakanPage()">Aksesoris</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Keranjang.html" style="color: #ffffff;">Keranjang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>  
+    <div class="container">
+        <h1>Keranjang Belanja</h1>
+        <div id="cart-items">
+            <!-- Data Barang di keranjang akan ditampilkan di sini -->
+        </div><div class="row mt-3">
+            <div class="col-md-8"></div>
+            <div class="col-md-4 text-end">
+                <h4>Total Harga: <span id="total-price">0</span></h4>
+                <button type="button" class="btn btn-primary mt-3" onclick="window.location.href='beli sekarang.html'">Check Out</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        // Membuat permintaan AJAX untuk memuat item di keranjang dari file 'keranjang.php'
+    $.ajax({
+        url: 'keranjang.php',
+        type: 'GET',
+        success: function(response) {
+            // Menampilkan item di keranjang ke elemen dengan id 'cart-items'
+            $('#cart-items').html(response);
+            calculateTotalPrice();  // Menghitung total harga setelah item dimuat
+        },
+        error: function(xhr, status, error) {
+            console.error('AJAX Error:', status, error);
+        }
+    });
+
+    // Fungsi untuk menghitung total harga
+    function calculateTotalPrice() {
+        var totalPrice = 0;
+        // Iterasi melalui setiap item di keranjang
+        $('.cart-item').each(function() {
+            var priceString = $(this).find('.item-price').text().trim(); // Mendapatkan harga item sebagai string
+            var price = parseFloat(priceString.replace('Rp ', '').replace(/\./g, '').replace(',', '.')); // Mengubah string harga menjadi angka
+            var quantityString = $(this).find('.item-quantity').text().trim();
+            var quantity = parseInt(quantityString.replace('Quantity: ', '')); // Mendapatkan jumlah item
+            var subtotal = price * quantity; // Menghitung subtotal untuk setiap item
+            totalPrice += subtotal; // Menambahkan subtotal ke total harga
+        });
+        $('#total-price').text(formatCurrency(totalPrice)); // Menampilkan total harga dalam format mata uang
+    }
+
+   // Fungsi untuk memformat angka menjadi mata uang (Rp)
+    function formatCurrency(amount) {
+        if (amount === 0) {
+            return 'Rp 0';
+        }
+
+        // Mengubah angka menjadi string dan membagi menjadi bagian integer dan desimal
+        var parts = amount.toFixed(2).toString().split('.');
+        var integerPart = parts[0];
+        var decimalPart = parts[1];
+
+        // Memformat bagian integer dengan tanda titik sebagai pemisah ribuan
+        var formattedInteger = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+
+        // Memastikan bagian desimal memiliki dua digit
+        var paddedDecimal = decimalPart ? (decimalPart.length >= 2 ? decimalPart : decimalPart.padEnd(2, '0')) : '00';
+
+        // Mengembalikan string mata uang yang diformat
+        return 'Rp ' + formattedInteger + ',' + paddedDecimal;
+    }
+
+        // Event click untuk tombol edit
+        $(document).on('click', '.edit-btn', function() {
+            let productId = $(this).data('id');
+            let newQuantity = prompt("Masukkan jumlah baru:");
+
+            if (newQuantity != null && newQuantity > 0) {
+                // Membuat permintaan AJAX untuk mengedit jumlah item di keranjang
+                $.ajax({
+                    url: 'edit_keranjang.php',
+                    type: 'POST',
+                    data: { id: productId, quantity: newQuantity },
+                    success: function(response) {
+                        alert(response);
+                        location.reload(); // Memuat ulang halaman untuk melihat perubahan
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Failed to edit item:', error);
+                    }
+                });
+            }
+        });
+
+        // Event click untuk tombol hapus
+        $(document).on('click', '.delete-btn', function() {
+            let productId = $(this).data('id');
+
+            if (confirm("Apakah Anda yakin ingin menghapus item ini?")) {
+                // Membuat permintaan AJAX untuk menghapus item dari keranjang
+                $.ajax({
+                    url: 'hapus_keranjang.php',
+                    type: 'POST',
+                    data: { id: productId },
+                    success: function(response) {
+                        alert(response);
+                        location.reload(); // Memuat ulang halaman untuk melihat perubahan
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Failed to delete item:', error);
+                    }
+                });
+            }
+        });
+        });
+        </script>
+</script>
+
+
+<footer class="footer mt-auto py-3" style="background-color: rgb(0,0,0);">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 mb-3 mb-lg-0">
+                <div class="map-responsive" style="overflow: hidden; border-radius: 15px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.8434416691407!2d110.3354412733644!3d-7.8063930721381265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57fadd0b0c8d%3A0xbce5d6f82ab337be!2sAha%20Aksesoris!5e0!3m2!1sen!2sid!4v1714698115149!5m2!1sen!2sid" width="100%" height="200" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+  
+            <div class="col-lg-4">
+                <h5>kosKita</h5>
+                <p>Tempat pencarian Aksesoris dan Hp terlengkap dan termurah di Jogjakarta sesuai dengan kebutuhan Anda, Kami menawarkan beragam produk terbaru dan terlengkap serta berbagai promo menarik setiap bulannya. Kunjungi kami sekarang dan temukan kebutuhan Anda dengan harga terbaik!</p>
+            </div>
+            <div class="col-lg-2">
+                <h5>Kebijakan</h5>
+                <ul class="list-unstyled">
+                    <li><a href="kebijakan dan privasi.html" class="text-white">Kebijakan Privasi</a></li>
+                    <li><a href="syarat dan ketentuan.html" class="text-white">Syarat dan Ketentuan</a></li>
+                    <li><a href="pusat bantuan.html" class="text-white">Pusat Bantuan</a></li>
+                </ul>
+             
+              </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+            <p>&copy; 2024 kosKita. All rights reserved.</p>
+        </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelector('.form-inline').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var searchQuery = document.querySelector('.form-control').value;
+        this.action = searchQuery + ".html";
+        this.submit();
+    });
+    </script>
+      <!-- Floating Buttons -->
+  <a href="https://wa.me/6285779740537?text=Halo%21%20Saya%20ingin%20informasi%20lebih%20lanjut." class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+  <a href="https://www.instagram.com/hw_rayhan?igsh=MXN0aWMyMzB2bW9xNg==" class="float float-instagram" target="_blank">
+  
+    <i class="fa fa-instagram my-float"></i>
+  </a>
+  <a href="https://x.com/ZXeKKkkkkkkkk?t=k3HSreNnEGlOKypPbV5hwQ&s=09" class="float float-twitter" target="_blank">
+  
+    <i class="fa fa-twitter my-float"></i>
+  </a>
+</body>
+</html>
